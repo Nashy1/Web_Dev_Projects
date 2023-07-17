@@ -1,6 +1,6 @@
 import { Redirect } from 'react-router-dom';
 import './App.css';
-import Home from './pages/home';
+// import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import Product from './pages/Product';
 import Register from './pages/Register';
