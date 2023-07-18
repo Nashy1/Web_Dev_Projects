@@ -6,7 +6,7 @@ import Product from './pages/Product';
 import Register from './pages/Register';
 import Cart from './pages/Cart';
 import PayGate from './pages/PayGate';
-import Success from './pages/Success';
+// import Success from './pages/Success';
 import Login from './pages/Login';
 
 import {
@@ -49,9 +49,9 @@ function App() {
           {user ? <Redirect to="/" /> : <Register />}
         </Route>
 
-        <Route path="/success">
+        {/* <Route path="/success">
           <Success />
-        </Route>
+        </Route> */}
 
         <Route path="/paygate">
           <PayGate/>

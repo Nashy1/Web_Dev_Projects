@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from "styled-components"
-import CategoryItem from './CategoryItem'
+import CategoryItem from './Categoryltem'
 import { categories } from "../data.js"
 import {mobile} from "../responsive";
 
