@@ -25,6 +25,8 @@ export default class MoviesController {
         res.json(response)
     }
     //////////////////
+    //allows as to get the movie us its id
+
     static async apiGetMovieById(req, res, next) {
         try {
             let id = req.params.id || {}
