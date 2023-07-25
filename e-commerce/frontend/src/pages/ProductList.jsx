@@ -46,74 +46,74 @@ const Option = styled.option`
 `;
 
 const ProductList = () => {
-  const location = useLocation();
-  const cat = location.pathname.split("/")[2];
-  const [filters, setFilters] = React.useState({});
-  const [sort, setSort] = React.useState("newest");
+    const location = useLocation();
+    const cat = location.pathname.split("/")[2];
+    const [filters, setFilters] = React.useState({});
+    const [sort, setSort] = React.useState("newest");
 
-  const handleFilters = (e) => {
-    const value = e.target.value;
-    const filterName = e.target.name;
+    const handleFilters = (e) => {
+        const value = e.target.value;
+        const filterName = e.target.name;
 
 
-    setFilters({
-      ...filters,
-      [filterName]: value
-    })
+        setFilters({
+            ...filters,
+            [filterName]: value
+        })
 
-  };
+    };
 
-  return (
-    <Container>
-      <Navbar />
-      <Announcement />
-      <Title>{cat}</Title>
-      <FilterContainer>
-        <Filter>
-          <FilterText>Filter Products:</FilterText>
+    return (
+        <Container>
+            <Navbar />
+            <Announcement />
+            <Title>{cat}</Title>
+            <FilterContainer>
+                <Filter>
+                    <FilterText>Filter Products:</FilterText>
 
-          <Select name="color" onChange={handleFilters}>
-            <Option disabled selected>
-              Color
-            </Option>
-            <Option>White</Option>
-            <Option>Black</Option>
-            <Option>Red</Option>
-            <Option>Blue</Option>
-            <Option>Yellow</Option>
-            <Option>Green</Option>
-          </Select>
+                    <Select name="color" onChange={handleFilters}>
+                        <Option disabled selected>
+                            Color
+                        </Option>
+                        <Option>White</Option>
+                        <Option>Black</Option>
+                        <Option>Red</Option>
+                        <Option>Blue</Option>
+                        <Option>Yellow</Option>
+                        <Option>Green</Option>
+                    </Select>
 
-          <Select name="size" onChange={handleFilters}>
-            <Option disabled selected>
-              Size
-            </Option>
-            <Option>XS</Option>
-            <Option>S</Option>
-            <Option>M</Option>
-            <Option>L</Option>
-            <Option>XL</Option>
-            <Option>Green</Option>
-          </Select>
-        </Filter>
+                    <Select name="size" onChange={handleFilters}>
+                        <Option disabled selected>
+                            Size
+                        </Option>
+                        <Option>XS</Option>
+                        <Option>S</Option>
+                        <Option>M</Option>
+                        <Option>L</Option>
+                        <Option>XL</Option>
+                        <Option>Green</Option>
+                    </Select>
+                </Filter>
 
-        <Filter>
+                <Filter>
 
-          <FilterText>Sort Products:</FilterText>
+                    <FilterText>Sort Products:</FilterText>
 
-          <Select onChange={(e) => setSort(e.target.value)} >
-            <Option value="newest" selected>Newest</Option>
-            <Option value="asc" >Price (asc)</Option>
-            <Option value="desc" >Price (desc)</Option>
-          </Select>
-        </Filter>
-      </FilterContainer>
+                    <Select onChange={(e) => setSort(e.target.value)} >
+                        <Option value="newest" selected>Newest</Option>
+                        <Option value="asc" >Price (asc)</Option>
+                        <Option value="desc" >Price (desc)</Option>
+                    </Select>
+                </Filter>
+            </FilterContainer>
 
-      <Products cat={cat} filters={filters} sort={sort} />
-      <Newsletter />
-      <Footer />
-    </Container>
-  )
+            <Products cat={cat} filters={filters} sort={sort} />
+            <Newsletter />
+            <Footer />
+        </Container>
+    )
 }
 
 export default ProductList
