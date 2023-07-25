@@ -8,15 +8,15 @@ const OrderSchema = new mongoose.Schema(
                 productId: {
                     type: String,
                 },
-                quantity:{
+                quantity: {
                     type: Number,
-                    default:1,
+                    default: 1,
                 }
             }
         ],
-        amount: {type: Number, required: true},
-        address: {type: Object, required: true},
-        status: {type:String, default: "paid" },
+        amount: { type: Number, required: true },
+        address: { type: Object, required: true },
+        status: { type: String, default: "paid" },
     },
     { timestamps: true }
 )
