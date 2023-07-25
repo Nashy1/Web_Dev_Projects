@@ -18,11 +18,11 @@ const Container = styled.div`
 `;
 
 const Announcement = () => {
-  return (
-    <Container>
-      Super Deal! Free Shipping on Orders Over R500!
-    </Container>
-  );
+    return (
+        <Container>
+            Super Deal! Free Shipping on Orders Over R500!
+        </Container>
+    );
 };
 
 export default Announcement;
