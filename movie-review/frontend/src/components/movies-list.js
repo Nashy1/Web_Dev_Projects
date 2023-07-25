@@ -9,11 +9,6 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
-//The useEffect hook is called after the component renders
-// So if we want any code to run after rendering, we put it here
-//NB: Specify an empty array in 2nd argument of useEffect.
-//When doing so: useEffect is called only once when component first renders
-//Without it would run on every render of the component
 
 const MoviesList = props => {
     const [movies, setMovies] = useState([])
@@ -60,8 +55,7 @@ const MoviesList = props => {
 
     const retrieveRatings = () => {
         MovieDataService.getRatings()
-            .then(response => {
-                //start with All ratings, if user doesn't specify any ratings
+            .then(response => {                
                 setRatings(['All Ratings'].concat(response.data))
             })
             .catch(e => {
