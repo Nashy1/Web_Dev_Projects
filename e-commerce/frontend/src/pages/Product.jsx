@@ -8,8 +8,8 @@ import { Add, Remove } from '@material-ui/icons';
 import { mobile } from "../responsive"
 import { useLocation } from 'react-router-dom';
 import { publicRequest } from '../requestMethods';
-import { addProduct } from '../redux/cartRedux'; 
-import { useDispatch  } from "react-redux";
+import { addProduct } from '../redux/cartRedux';
+import { useDispatch } from "react-redux";
 
 const Container = styled.div`
     margin-top: 45px;    
@@ -18,7 +18,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
     padding: 50px;
     display: flex;
-    ${mobile({ padding: "10px", flexDirection:"column" })};
+    ${mobile({ padding: "10px", flexDirection: "column" })};
 `;
 
 const ImgContainer = styled.div`
@@ -133,16 +133,16 @@ const Button = styled.button`
 const Product = () => {
     const location = useLocation();
     const id = location.pathname.split("/")[2];
-    const [product,setProduct] = useState({});
-    const [quantity,setQuantity] = useState(1);
-    const [color,setColor] = useState("");
-    const [size,setSize] = useState("");
+    const [product, setProduct] = useState({});
+    const [quantity, setQuantity] = useState(1);
+    const [color, setColor] = useState("");
+    const [size, setSize] = useState("");
     const dispatch = useDispatch();
 
     useEffect(() => {
-        const getProduct = async() => {
+        const getProduct = async () => {
             try {
-                const res = await publicRequest.get("/products/find/"+id);
+                const res = await publicRequest.get("/products/find/" + id);
                 setProduct(res.data);
             } catch (error) {
 
@@ -184,7 +184,7 @@ const Product = () => {
                             ))}
                         </Filter>
                         <Filter>
-                            <FilterTitle>Size</FilterTitle>                            
+                            <FilterTitle>Size</FilterTitle>
                             <FilterSize onChange={(e) => setSize(e.target.value)}>
                                 {product.size && product?.size.map((s) => (
                                     <FilterSizeOption key={s}>{s}</FilterSizeOption>
