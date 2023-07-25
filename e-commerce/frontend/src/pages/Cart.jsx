@@ -261,14 +261,14 @@ const Cart = () => {
             <hr />
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
-              <SummaryItemPrice>R {cart.total.toFixed(2) }</SummaryItemPrice>
+              <SummaryItemPrice>R {cart.total.toFixed(2)}</SummaryItemPrice>
             </SummaryItem>
 
             <hr />
             <br />
             {/* <TopButton type="filled" onClick={() => checkout()} >CHECKOUT NOW</TopButton> */}
 
-            <Payment amount={ cart.total.toFixed(2) * 100 } />
+            <Payment amount={cart.total.toFixed(2) * 100} />
 
           </Summary>
         </Bottom>
