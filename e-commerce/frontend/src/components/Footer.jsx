@@ -1,7 +1,7 @@
 import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
-import { mobile } from "../responsive"
+import { mobile } from "../reponsive"
 import { Link } from '@material-ui/core';
 
 const Container = styled.div`

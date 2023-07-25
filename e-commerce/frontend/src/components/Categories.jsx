@@ -3,7 +3,7 @@ import React from 'react'
 import styled from "styled-components"
 import CategoryItem from './CategoriesItem'
 import { categories } from "../data.js"
-import { mobile } from "../responsive";
+import { mobile } from "../reponsive";
 
 
 const Container = styled.div`

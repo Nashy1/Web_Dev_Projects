@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from "styled-components"
-import { mobile } from "../responsive"
+import { mobile } from "../reponsive"
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Container = styled.div`
