@@ -59,14 +59,14 @@ const Newsletter = () => {
 
     const handleClick = async (e) => {
         e.preventDefault();
-        const res = await subscribe(email);   
-        if (res.success) 
-            setEmail("");        
+        const res = await subscribe(email);
+        if (res.success)
+            setEmail("");
         setSignupStatus(res.message);
     }
 
     return (
-        <Container>            
+        <Container>
             <Title>Newsletter</Title>
             <Desc>Get timely updates from your favourite products.</Desc>
             <InputContainer>
@@ -76,7 +76,7 @@ const Newsletter = () => {
                 </Button>
             </InputContainer>
             <Status>
-                <br/>
+                <br />
                 {signupStatus && signupStatus}
             </Status>
         </Container>

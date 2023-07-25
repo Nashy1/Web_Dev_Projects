@@ -66,26 +66,26 @@ const Icon = styled.div`
     }
 `;
 
-const Product = ({item}) => {
-  return (
-    <Container>
-        <Circle />
-        <Image src={item.image} />
-        <Info>
-            <Icon>
-                <ShoppingCartOutlined />
-            </Icon>
-            <Icon>
-                <Link to={`/product/${item._id}`} style={{textDecoration: 'none', color: 'black'}}>
-                    <SearchOutlined />
-                </Link>
-            </Icon>
-            <Icon>
-                <FavoriteBorderOutlined />
-            </Icon>
-        </Info>
-    </Container>
-  )
+const Product = ({ item }) => {
+    return (
+        <Container>
+            <Circle />
+            <Image src={item.image} />
+            <Info>
+                <Icon>
+                    <ShoppingCartOutlined />
+                </Icon>
+                <Icon>
+                    <Link to={`/product/${item._id}`} style={{ textDecoration: 'none', color: 'black' }}>
+                        <SearchOutlined />
+                    </Link>
+                </Icon>
+                <Icon>
+                    <FavoriteBorderOutlined />
+                </Icon>
+            </Info>
+        </Container>
+    )
 }
 
 export default Product
