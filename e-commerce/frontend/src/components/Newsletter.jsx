@@ -1,7 +1,7 @@
 import { Description, Send } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components';
-import { mobile } from "../responsive"
+import { mobile } from "../reponsive"
 import { subscribe } from '../redux/apiCalls';
 
 const Container = styled.div`

@@ -5,7 +5,7 @@ import Announcement from '../components/Announcement';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import { Add, Remove } from '@material-ui/icons';
-import { mobile } from "../responsive"
+import { mobile } from "../reponsive"
 import { useLocation } from 'react-router-dom';
 import { publicRequest } from '../requestMethods';
 import { addProduct } from '../redux/cartRedux';
