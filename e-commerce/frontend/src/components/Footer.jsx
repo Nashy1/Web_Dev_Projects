@@ -91,70 +91,70 @@ const MyLink = styled.a`
 `;
 
 const Footer = () => {
-  return (
-    <Container>
-      <Left>
-        <Logo>MARK.</Logo>
-        <Desc>
-          Discover a world of convenience and quality at your fingertips, with our wide range of products and reliable customer support.
-        </Desc>
-        <SocialContainer>
-          <Link href="https://www.facebook.com">
-            <SocialIcon bg="3B5999">
-              <Facebook />
-            </SocialIcon>
-          </Link>
+    return (
+        <Container>
+            <Left>
+                <Logo>MARK.</Logo>
+                <Desc>
+                    Discover a world of convenience and quality at your fingertips, with our wide range of products and reliable customer support.
+                </Desc>
+                <SocialContainer>
+                    <Link href="https://www.facebook.com">
+                        <SocialIcon bg="3B5999">
+                            <Facebook />
+                        </SocialIcon>
+                    </Link>
 
-          <Link href="https://www.twitter.com">
-            <SocialIcon bg="E4405F">
-              <Twitter />
-            </SocialIcon>
-          </Link>
+                    <Link href="https://www.twitter.com">
+                        <SocialIcon bg="E4405F">
+                            <Twitter />
+                        </SocialIcon>
+                    </Link>
 
-          <Link href="https://www.instagram.com">
-            <SocialIcon bg="55ACEE">
-              <Instagram />
-            </SocialIcon>
-          </Link>
+                    <Link href="https://www.instagram.com">
+                        <SocialIcon bg="55ACEE">
+                            <Instagram />
+                        </SocialIcon>
+                    </Link>
 
-          <Link href="https://www.pinterest.com">
-            <SocialIcon bg="E60023">
-              <Pinterest />
-            </SocialIcon>
-          </Link>
+                    <Link href="https://www.pinterest.com">
+                        <SocialIcon bg="E60023">
+                            <Pinterest />
+                        </SocialIcon>
+                    </Link>
 
-        </SocialContainer>
-      </Left>
-      <Center>
-        <Title>Useful Links</Title>
+                </SocialContainer>
+            </Left>
+            <Center>
+                <Title>Useful Links</Title>
 
-        <List>
-          <ListItem><MyLink href="/" color="black">Home</MyLink></ListItem>
-          <ListItem><MyLink href="/products/men" color="black">Mens Fashion</MyLink></ListItem>
-          <ListItem><MyLink href="/products/women" color="black">Women Fashion</MyLink></ListItem>
-          <ListItem><MyLink href="/products/kids" color="black">Kids Fashion</MyLink></ListItem>
-          <ListItem><MyLink href="/account" color="black">My Account</MyLink></ListItem>
-          <ListItem><MyLink href="/account/orders" color="black">Order Tracking</MyLink></ListItem>
-          <ListItem><MyLink href="/cart" color="black">My Cart</MyLink></ListItem>
-          <ListItem><MyLink href="/terms" color="black">Terms and Conditions</MyLink></ListItem>
-        </List>
+                <List>
+                    <ListItem><MyLink href="/" color="black">Home</MyLink></ListItem>
+                    <ListItem><MyLink href="/products/men" color="black">Mens Fashion</MyLink></ListItem>
+                    <ListItem><MyLink href="/products/women" color="black">Women Fashion</MyLink></ListItem>
+                    <ListItem><MyLink href="/products/kids" color="black">Kids Fashion</MyLink></ListItem>
+                    <ListItem><MyLink href="/account" color="black">My Account</MyLink></ListItem>
+                    <ListItem><MyLink href="/account/orders" color="black">Order Tracking</MyLink></ListItem>
+                    <ListItem><MyLink href="/cart" color="black">My Cart</MyLink></ListItem>
+                    <ListItem><MyLink href="/terms" color="black">Terms and Conditions</MyLink></ListItem>
+                </List>
 
-      </Center>
-      <Right>
-        <Title>Contact</Title>
-        <ContactItem>
-          <Room style={{ marginRight: "10px" }} /> 11 Karoo Drive, Eastern Cape
-        </ContactItem>
-        <ContactItem>
-          <Phone style={{ marginRight: "10px" }} /> +1 234 56 78
-        </ContactItem>
-        <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} /> mark1drinkwater@gmail.com
-        </ContactItem>
-        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
-      </Right>
-    </Container >
-  )
+            </Center>
+            <Right>
+                <Title>Contact</Title>
+                <ContactItem>
+                    <Room style={{ marginRight: "10px" }} /> 11 Karoo Drive, Eastern Cape
+                </ContactItem>
+                <ContactItem>
+                    <Phone style={{ marginRight: "10px" }} /> +1 234 56 78
+                </ContactItem>
+                <ContactItem>
+                    <MailOutline style={{ marginRight: "10px" }} /> mark1drinkwater@gmail.com
+                </ContactItem>
+                <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+            </Right>
+        </Container >
+    )
 }
 
 export default Footer;
