@@ -28,13 +28,13 @@ app.use("*", (req, res, next) => {
     next();
 });
 
-app.use("/api/v1/auth", authRoute);
-app.use("/api/v1/users", userRoute);
-app.use("/api/v1/products", productRoute);
-app.use("/api/v1/orders", orderRoute);
-app.use("/api/v1/carts", cartsRoute);
-app.use("/api/v1/checkout", stripeRoute);
-app.use("/api/v1/subscribers", subscriberRoute)
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
+app.use("/api/products", productRoute);
+app.use("/api/orders", orderRoute);
+app.use("/api/carts", cartsRoute);
+app.use("/api/checkout", stripeRoute);
+app.use("/api/subscribers", subscriberRoute)
 
 app.listen(process.env.PORT || 5000, ()=> {
     console.log("Backend server is running!");
