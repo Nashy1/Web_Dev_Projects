@@ -22,7 +22,7 @@ const MoviesList = props => {
 
     useEffect(() => {
         setCurrentPage(0)        
-    }, [currvde])
+    }, [currentSearchMode])
 
     useEffect(() => {
         // retrieveMovies()
