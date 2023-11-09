@@ -5,19 +5,19 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
         min:2,
-        max:50,
+        max:50
     },
     lastName:{
         type: String,
         required: true,
         min:2,
-        max:50,
+        max:50
     },
     email:{
         type: String,
         required: true,
         unique: true,
-        max:50,
+        max:50
     },
     password:{
         type: String,
@@ -35,7 +35,7 @@ const UserSchema = new mongoose.Schema({
     location:String,
     occupation: String,
     viewedProfile: Number,
-    impressions: Number,
+    impressions: Number
 },{timestamps:true});
 
 
