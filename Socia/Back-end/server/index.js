@@ -1,5 +1,5 @@
 import  express from "express";
-import bodyParser, { urlencoded } from "body-parser";
+import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -32,7 +32,7 @@ const storage = multer.diskStorage({
         cb(null,"public/assets");
     },
     filename: function (req,file,cb){
-        cb.apply(null,file.originalname);
+        cb(null,file.originalname);
     }
 })//this was got from the github of multer. so anytime uploads a file onto the the websit. it will be saved to p/a
 const upload = multer({storage});
