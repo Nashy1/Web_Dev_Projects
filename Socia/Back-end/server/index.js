@@ -9,7 +9,7 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import { error } from "console";
-import { register } from "/controllers";
+import { register } from "./controllers/auth.js";
 
 
 
