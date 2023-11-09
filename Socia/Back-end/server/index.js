@@ -8,6 +8,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
+import { error } from "console";
 
 /*Configuration */
 const __filename = fileURLToPath(import.meta.url);
@@ -19,7 +20,7 @@ app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({policy:"cross-origin"}));
 app.use(morgan);
 app.use(bodyParser.json({limit:"30mb"}));
-app.use(bodyParser,urlencoded({limit:"30mb", extended:true}));
+app.use(bodyParser.urlencoded({limit:"30mb", extended:true}));
 app.use(cors());
 app.use("/assets",express.static(path.join(__dirname,'public/assets')));
 
@@ -36,3 +37,11 @@ const storage = multer.diskStorage({
 })//this was got from the github of multer. so anytime uploads a file onto the the websit. it will be saved to p/a
 const upload = multer({storage});
 
+/*MONGOOSE SETUP */
+const PORT = process.env.PORT|| 6001;
+mongoose.connect(process.env.MONGO_URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    }).then(()=>{
+        app.listen(PORT,()=> console.log(`Server PORT :${PORT}`));
+    }).catch((error => console.log(`${error} did not connect`)));
