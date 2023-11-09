@@ -33,4 +33,6 @@ const storage = multer.diskStorage({
     filename: function (req,file,cb){
         cb.apply(null,file.originalname);
     }
-})
+})//this was got from the github of multer. so anytime uploads a file onto the the websit. it will be saved to p/a
+const upload = multer({storage});
+
