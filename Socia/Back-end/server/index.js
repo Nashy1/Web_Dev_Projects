@@ -9,6 +9,10 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import { error } from "console";
+import { register } from "/controllers";
+
+
+
 
 /*Configuration */
 const __filename = fileURLToPath(import.meta.url);
@@ -36,6 +40,10 @@ const storage = multer.diskStorage({
     }
 })//this was got from the github of multer. so anytime uploads a file onto the the websit. it will be saved to p/a
 const upload = multer({storage});
+
+
+/*Routes with Files */
+app.post("/auth/register", upload.single("picture"), register);
 
 /*MONGOOSE SETUP */
 const PORT = process.env.PORT|| 6001;
