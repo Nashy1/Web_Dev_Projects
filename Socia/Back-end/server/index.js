@@ -12,7 +12,7 @@ import { error } from "console";
 import authRoutes from "./Routes/auth.js";
 import userRoutes from "./Routes/users.js"; 
 import postRoutes from "./Routes/posts.js";
-import {createPost} from "./controllers/post.js";
+import {createPost} from "./controllers/posts.js";
 import { register } from "./controllers/auth.js";
 import { verifyToken } from "./middleware/auth.js";
 
