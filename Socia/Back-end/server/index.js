@@ -10,7 +10,9 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { error } from "console";
 import authRoutes from "./Routes/auth.js";
-import userRoutes from "./Routes/users.js";
+import userRoutes from "./Routes/users.js"; 
+import postRoutes from "./Routes/posts.js";
+import {createPost} from "./controllers/post.js";
 import { register } from "./controllers/auth.js";
 import { verifyToken } from "./middleware/auth.js";
 
@@ -47,11 +49,12 @@ const upload = multer({storage});
 
 /*Routes with Files */
 app.post("/auth/register", upload.single("picture"),register);
-
+app.post("/posts", verifyToken, upload.single("picture"),createPost)
 
 /*Routes */
 app.use("/auth" ,authRoutes)
-app.use("/users",userroutes)
+app.use("/users",userRoutes)
+app.post("/post",postRoutes)
 
 
 /*MONGOOSE SETUP */
