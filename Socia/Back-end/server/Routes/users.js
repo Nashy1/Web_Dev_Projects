@@ -4,3 +4,4 @@ import{
     getUserFriends,
     assRemoveFriend,
 } from "../controllers/users.js";
+import { verifyToken } from "../middleware/auth.js";
