@@ -74,7 +74,7 @@ export const getUserPosts = async(req,res)=>{
         {new:true}
     );
 
-        res.status(200).json(updatedPosts);
+        res.status(200).json(updatedPost);
 
     }catch(err){
         res.status(404).json({msg:err.msg})
