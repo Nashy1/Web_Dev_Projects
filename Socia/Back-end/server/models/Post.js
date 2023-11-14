@@ -28,7 +28,7 @@ const postSchema =mongoose.Schema(
         },
    
     },
-    {timeStamps: true};
+    {timeStamps: true}
 );
 
 
