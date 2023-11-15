@@ -7,7 +7,8 @@ import { Box,
     MenuItem,
     FormControl,
     useTheme,
-    useMediaQuery } from "@mui/material";
+    useMediaQuery, 
+    colors} from "@mui/material";
 import{
     Search,
     Message,
@@ -45,6 +46,21 @@ const Navbar=()=>{
 
     return 
     <FlexBetween padding={"1rem 6%"} backgroundColor={alt}>
+        <FlexBetween gap={"1.75rem"}>
+            <Typography fontWeight={"bold"} fontSize={"clamp(1rem,2rem,2.25rem)"} color="primary" onClick ={()=> navigate("/home")} sx={{
+                "&:hover":{
+                    color:primaryLight,
+                    cursor:"pointer"
+                },
+            }}>
+                XO
+            </Typography>
+            {isNonMobileScreen && (
+                <FlexBetween backgroundColor={neutralLight} borderRadius={"9px"} gap={"3rem"} padding={"0.1rem 1.5rem"}>
+
+                </FlexBetween>
+            )}
+        </FlexBetween>
     </FlexBetween>
 };
 
