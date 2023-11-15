@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { act } from "react-dom/test-utils";
 
-const intialState ={
+const initialState ={
     mode:"light",
     user:null,
     token: null,
@@ -24,7 +24,7 @@ export const authSlice = createSlice({
             state.user = null,
             state.token = null;
         },
-        setFriends:(state,actoin)=>{
+        setFriends:(state,action)=>{
             if(state.user){
                 state.user.friends = action.payload.friends;
             } else {
