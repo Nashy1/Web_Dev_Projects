@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Socio-X
+          New-Twitter
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
