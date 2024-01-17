@@ -50,7 +50,7 @@ export const addRemoveFriend = async(req,res)=>{
         }
 
         await user.save();
-        await friend,save();
+        await friend.save();
 
         const formattedFriends = friends.map(
             ({_id,firstName,lastName,occupation,location,picturePath})=>{
